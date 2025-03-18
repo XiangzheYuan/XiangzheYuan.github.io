@@ -1,13 +1,12 @@
 ---
-title: "Paper Title Number 4"
+title: "KoroT-3E: A Personalized Musical Mnemonics Tool for Enhancing Memory Retention of Complex Computer Science Concepts"
 collection: publications
 category: conferences
 permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
+excerpt: 'As the demand for computer science (CS) skills grows, mastering foundational concepts is crucial yet challenging for novice learners. To address this challenge, we present KoroT-3E, an AI-based system that creates personalized musical mnemonics to enhance both memory retention and understanding of concepts in CS. KoroT-3E enables users to transform complex concepts into memorable lyrics and compose melodies that suit their musical preferences. We conducted semi-structured interviews (n=12) to investigate why novice learners find it challenging to memorize and understand CS concepts. The findings, combined with constructivist learning theory, established our initial design, which was then refined following consultations with CS education experts. An empirical experiment(n=36) showed that those using KoroT-3E (n=18) significantly outperformed the control group (n=18), with improved memory efficiency, increased motivation, and a positive learning experience. These findings demonstrate the effectiveness of integrating multimodal generative AI into CS education to create personalized and interactive learning experiences. '
+date: 2024-09-16
+venue: 'arXiv'
 paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+citation: 'Yuan X, Wang J, Hu S, et al. KoroT-3E: A Personalized Musical Mnemonics Tool for Enhancing Memory Retention of Complex Computer Science Concepts[J]. arXiv preprint arXiv:2409.10446, 2024.'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
