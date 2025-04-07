@@ -12,7 +12,7 @@ Currently I 'm a visiting student at SUST,supervised by [Prof.Pengcheng An](http
 
 Research Interests
 ======
-Human Computer Interaction, Human AI Collaboration, Security and Privacy
+Human Computer Interaction
 
 News
 ======
