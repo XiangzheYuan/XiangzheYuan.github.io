@@ -17,4 +17,5 @@ Human Computer Interaction
 News
 ======
 **April,2025** <i>A Day in Their Shoes</i> has been accepted by FAccT'2025. Thanks and congratulations to all my co-authors!
+
 **Jan,2025**  As a reviewer for CHI'2025 LBW.
