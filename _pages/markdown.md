@@ -1,6 +1,6 @@
 ---
 permalink: /markdown/
-title: "Some whimsical ideas"
+title: "UMA/UFO/USO"
 author_profile: true
 redirect_from: 
   - /md/
