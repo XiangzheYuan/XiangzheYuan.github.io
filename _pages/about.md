@@ -18,6 +18,6 @@ News
 ======
 **May,2025** As a reviewer for CSCW'2025 Poster.
 
-**April,2025** <i>[A Day in Their Shoes](https://arxiv.org/abs/2505.05786)</i> has been accepted by FAccT'2025. Thanks and congratulations to all my co-authors!
+**April,2025** <i>[A Day in Their Shoes](https://dl.acm.org/doi/abs/10.1145/3715275.3732090)</i> has been accepted by FAccT'2025. Thanks and congratulations to all my co-authors!
 
 **Jan,2025**  As a reviewer for CHI'2025 LBW.
