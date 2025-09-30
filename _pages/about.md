@@ -10,7 +10,7 @@ My name is Xiangzhe Yuan (You can try pronouncing it like this: 'Shan Jer You-en
 
 Research Interests
 ======
-My research interests are in Human-Computer Interaction (HCI), Human-AI Collaboration, and Responsible AI. I have been a science fiction enthusiast since childhood, influenced by many sci-fi books, movies and anime. This early exposure sparked my curiosity about advanced technologies such as AI and robotics, and it continues to shape my research interests today.  I've worked a bit on the technical side of AI and now on the human-centered side, so I sometimes see problems from a different angle (at least I like to think so 😅).
+My research interests are in Human-Computer Interaction (HCI), Human-AI Collaboration, and Responsible AI. I have been a science fiction enthusiast since childhood, influenced by many sci-fi books, movies and anime. This early exposure sparked my curiosity about advanced technologies such as AI and robotics, and it continues to shape my research interests today.  I've worked a bit on the technical side of AI and now on the human-centered side, so I sometimes see problems from a different angle (at least I like to think so,).
 
 
 News
@@ -21,6 +21,9 @@ News
 Services
 ======
 Reviewer of ACM IUI 2026.
+
 Reviewer of ACM CHI 2026.
+
 Reviewer of Posters in ACM CSCW'2026.
+
 Reviewer of Late-Breaking Works in ACM CHI'2025
