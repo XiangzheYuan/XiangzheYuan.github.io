@@ -41,3 +41,87 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+/* ===== Publications 网格卡片 ===== */
+
+/* 让列表变成自适应网格（320px 起一列） */
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem; /* 卡片间距 */
+}
+
+.archive__item {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  /* 轻微卡片感：暗色主题会很好看；亮色主题同样适用 */
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* 缩略图统一尺寸，裁剪为等高矩形 */
+.archive__item-teaser img,
+.archive__item-teaser video {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* 标题更大、易读、可多行 */
+.archive__item-title {
+  font-size: 1.1rem;      /* 需要更大可调到 1.2–1.25rem */
+  line-height: 1.35;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.archive__item-title a {
+  text-decoration: none;       /* 去掉默认下划线 */
+  border-bottom: none;
+}
+
+.archive__item-title a:hover {
+  text-decoration: underline;  /* 悬停时再显示下划线 */
+}
+
+/* 去掉标题后面的小链条图标 */
+.archive__item-title .fa-link { display: none; }
+
+/* 元信息与段落的间距更紧凑些 */
+.archive__item p,
+.archive__item .page__meta {
+  margin: 0.35rem 0;
+}
+
+/* “Download …” 链接变按钮感（不依赖按钮类名） */
+.archive__item a[href*="arxiv.org/pdf"],
+.archive__item a[href$=".pdf"] {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  transition: background 0.2s ease, transform 0.05s ease;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.archive__item a[href*="arxiv.org/pdf"]:hover,
+.archive__item a[href$=".pdf"]:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+.archive__item a[href*="arxiv.org/pdf"]:active,
+.archive__item a[href$=".pdf"]:active {
+  transform: translateY(1px);
+}
+.archive__item {
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.archive__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
