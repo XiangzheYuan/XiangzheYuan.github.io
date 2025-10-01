@@ -80,18 +80,18 @@
 }
 
 /* 5) 左侧缩略图固定宽度，右侧内容自适应 */
-.archive__item.horizontal .archive__item-teaser { 
-  flex: 0 0 260px;             /* 调这里控制左侧宽度 */
+.archive__item.horizontal .archive__item-teaser {
+  flex: 0 0 300px;   /* 左边给一个合适的宽度，例如 300px，可按需要调 */
 }
 
-.archive__item.horizontal .archive__item-teaser img,
-.archive__item.horizontal .archive__item-teaser video {
+.archive__item.horizontal .archive__item-teaser img {
   width: 100%;
-  height: 160px;               /* 想更高就改这里，例如 180px/200px */
-  object-fit: cover;
+  height: auto;      /* 自动高度，保持比例 */
+  max-height: 220px; /* 可选：限制图片不要太高 */
+  object-fit: contain; /* 保证整张图显示，不会被裁剪 */
   border-radius: 10px;
-  display: block;
 }
+
 
 /* 6) 右侧正文区域占满剩余宽度 */
 .archive__item.horizontal .archive__item-body { 
