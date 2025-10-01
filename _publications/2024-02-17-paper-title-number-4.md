@@ -5,7 +5,7 @@ layout: single
 date: 2024-09-16
 category: conferences
 venue: "arXiv"
-external_url: "https://arxiv.org/abs/2409.10446"
+link: "https://arxiv.org/abs/2409.10446"
 header:
   teaser: /images/KoroT-3E-thumbnail.png
 ---
