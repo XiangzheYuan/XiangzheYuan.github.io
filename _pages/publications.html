@@ -14,24 +14,9 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- If categories are configured, render section by section -->
-{% if site.publication_category %}
-  {% for category in site.publication_category %}
-    <h2>{{ category[1].title }}</h2>
-    <hr />
-    <div class="entries-grid">
-      {% for post in site.publications reversed %}
-        {% if post.category == category[0] %}
-          {% include archive-single.html type="grid" %}
-        {% endif %}
-      {% endfor %}
-    </div>
+<!-- 简单列表，不分组，全部按时间倒序 -->
+<div class="entries-grid">
+  {% for post in site.publications reversed %}
+    {% include archive-single.html type="grid" %}
   {% endfor %}
-{% else %}
-  <!-- No category config: render all as a single grid -->
-  <div class="entries-grid">
-    {% for post in site.publications reversed %}
-      {% include archive-single.html type="grid" %}
-    {% endfor %}
-  </div>
-{% endif %}
+</div>
