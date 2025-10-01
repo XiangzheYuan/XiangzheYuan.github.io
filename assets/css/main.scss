@@ -42,113 +42,76 @@
     "vendor/magnific-popup/magnific-popup"
 ;
 
-/* ===== Publications 网格卡片 ===== */
+/* ========== Publications 横向卡片：重置旧规则，拉满宽度 ========== */
 
-/* 让列表变成自适应网格（320px 起一列） */
+/* 1) 不再用网格，整行展示 */
 .entries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.25rem; /* 卡片间距 */
+  display: block;           /* 关闭 grid 布局 */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.archive__item {
-  height: 100%;
+/* 2) 让每个 item 占满一行，并留出间距 */
+.list__item, .grid__item {
+  width: 100%;
+  margin: 0 0 1.25rem 0;
+}
+
+/* 3) 旧的卡片背景只给“非横向”的保留，避免窄柱背景 */
+.archive__item:not(.horizontal) {
   padding: 1rem;
   border-radius: 12px;
-  /* 轻微卡片感：暗色主题会很好看；亮色主题同样适用 */
   background: rgba(255,255,255,0.04);
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-/* 缩略图统一尺寸，裁剪为等高矩形 */
-.archive__item-teaser img,
-.archive__item-teaser video {
+/* 4) 横向卡片：整行、左右排布 */
+.archive__item.horizontal {
   width: 100%;
-  height: 160px;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+
+  /* 独立的卡片背景写在这里（覆盖旧规则） */
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* 5) 左侧缩略图固定宽度，右侧内容自适应 */
+.archive__item.horizontal .archive__item-teaser { 
+  flex: 0 0 260px;             /* 调这里控制左侧宽度 */
+}
+
+.archive__item.horizontal .archive__item-teaser img,
+.archive__item.horizontal .archive__item-teaser video {
+  width: 100%;
+  height: 160px;               /* 想更高就改这里，例如 180px/200px */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   display: block;
 }
 
-/* 标题更大、易读、可多行 */
-.archive__item-title {
-  font-size: 1.1rem;      /* 需要更大可调到 1.2–1.25rem */
+/* 6) 右侧正文区域占满剩余宽度 */
+.archive__item.horizontal .archive__item-body { 
+  flex: 1 1 auto;
+  min-width: 0;                /* 防止超长标题把布局撑坏 */
+}
+
+/* 7) 标题样式（可按需调大） */
+.archive__item.horizontal .archive__item-title {
+  font-size: 1.25rem;
   line-height: 1.35;
-  margin-top: 0.75rem;
-  margin-bottom: 0.25rem;
+  margin: 0 0 .5rem 0;
 }
-
-.archive__item-title a {
-  text-decoration: none;       /* 去掉默认下划线 */
-  border-bottom: none;
-}
-
-.archive__item-title a:hover {
-  text-decoration: underline;  /* 悬停时再显示下划线 */
-}
-
-/* 去掉标题后面的小链条图标 */
-.archive__item-title .fa-link { display: none; }
-
-/* 元信息与段落的间距更紧凑些 */
-.archive__item p,
-.archive__item .page__meta {
-  margin: 0.35rem 0;
-}
-
-/* “Download …” 链接变按钮感（不依赖按钮类名） */
-.archive__item a[href*="arxiv.org/pdf"],
-.archive__item a[href$=".pdf"] {
-  display: inline-block;
-  margin-top: 0.25rem;
-  padding: 0.45rem 0.7rem;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.06);
-  transition: background 0.2s ease, transform 0.05s ease;
+.archive__item.horizontal .archive__item-title a {
   text-decoration: none;
   border-bottom: none;
 }
+.archive__item.horizontal .archive__item-title a:hover { text-decoration: underline; }
 
-.archive__item a[href*="arxiv.org/pdf"]:hover,
-.archive__item a[href$=".pdf"]:hover {
-  background: rgba(255,255,255,0.10);
-}
-
-.archive__item a[href*="arxiv.org/pdf"]:active,
-.archive__item a[href$=".pdf"]:active {
-  transform: translateY(1px);
-}
-.archive__item {
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.archive__item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-/* Publications 页面顶部提示和列表之间的间距 */
-.wordwrap {
-  margin-bottom: 2rem;
-}
-
-/* 横向布局的 publication 卡片 */
-.archive__item.horizontal {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  background: rgba(255,255,255,0.04);
-  border-radius: 12px;
-  padding: 1rem;
-}
-
-.archive__item.horizontal .archive__item-teaser { flex: 0 0 180px; }
-.archive__item.horizontal .archive__item-teaser img {
-  width: 100%; height: auto; border-radius: 8px; object-fit: cover;
-}
-.archive__item.horizontal .archive__item-body { flex: 1; }
-.archive__item.horizontal .archive__item-title {
-  font-size: 1.2rem; margin: 0 0 .5rem 0; line-height: 1.3;
-}
+/* 8) 下载按钮区 */
 .pub-actions { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.25rem; }
 .pub-actions a {
   display:inline-block; padding:.45rem .7rem; border-radius:8px;
@@ -158,3 +121,11 @@
 .pub-actions a:hover { background:rgba(255,255,255,.10); }
 .pub-actions a:active { transform: translateY(1px); }
 
+/* 9) 移动端改为上下堆叠，避免挤压 */
+@media (max-width: 700px) {
+  .archive__item.horizontal { flex-direction: column; }
+  .archive__item.horizontal .archive__item-teaser { 
+    flex: 0 0 auto; width: 100%;
+  }
+  .archive__item.horizontal .archive__item-teaser img { height: 180px; }
+}
