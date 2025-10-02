@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-My name is Xiangzhe Yuan (You can try pronouncing it like this: 'Shan Jer You-en',袁湘哲). I am currently a PhD student in the CS department at UIowa.
+My name is Xiangzhe Yuan (You can try pronouncing it like this: 'Shan Jer You-en'). I am currently a PhD student in the CS department at UIowa.
 
 Research Interests
 ======
@@ -20,10 +20,7 @@ News
 
 Services
 ======
-Reviewer of ACM IUI 2026.
-
-Reviewer of ACM CHI 2026.
-
-Reviewer of Posters in ACM CSCW'2026.
-
-Reviewer of Late-Breaking Works in ACM CHI'2025
+- Reviewer of ACM IUI 2026.
+- Reviewer of ACM CHI 2026.
+- Reviewer of Posters in ACM CSCW'2026.
+- Reviewer of Late-Breaking Works in ACM CHI'2025
